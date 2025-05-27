@@ -9,6 +9,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; /* Asegurarse de que no haya padding que limite el ancho */
+  overflow-x: hidden; /* Prevenir scroll horizontal debido a 100vw */
+}
+
 a {
   font-weight: 500;
   color: #646cff; /* This might need to be updated later based on the new color scheme */
@@ -19,7 +27,6 @@ a:hover {
 }
 
 body {
-  margin: 0;
   background-color: var(--blanco-humo); /* Set body background to white */
   /* Removed display, place-items, min-width, min-height to allow layout components to control structure */
 }
