@@ -1,0 +1,38 @@
+import React from 'react';
+import type { Producto } from '../data/products'; // Import Producto type
+import '../styles/colors.css';
+import './ProductCard.css'; // Reuse the existing CSS for now
+
+interface FeaturedProductCardProps {
+  product: Producto; // Expect Producto interface
+  onClick: (productSlug: string) => void;
+}
+
+const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({ product, onClick }) => {
+  // Determine the category class based on 'dulce', 'salado', or 'bebida'
+  let categoryClass = '';
+  if (product.categorias.includes('dulce')) {
+    categoryClass = 'sweet';
+  } else if (product.categorias.includes('salado')) {
+    categoryClass = 'savory';
+  } else if (product.categorias.includes('bebida')) {
+    categoryClass = 'bebida';
+  }
+
+  const cardClass = `product-card ${categoryClass}`; // Combine base class with category class
+
+  // Construct the full image URL using BASE_URL
+  const imageUrl = import.meta.env.BASE_URL + product.imagenUrl.replace(/^\//, ''); // Remove leading slash if present
+
+  return (
+    <div className={cardClass} onClick={() => onClick(product.slug)}> {/* Use product.slug for navigation */}
+      {/* Use the constructed imageUrl */}
+      <img src={imageUrl} alt={product.nombre} className="product-image" />
+      <h3 className="product-name">{product.nombre}</h3>
+      <p className="product-description">{product.descripcion}</p>
+      <p className="product-price">{product.precio}</p> {/* Display the main product price */}
+    </div>
+  );
+};
+
+export default FeaturedProductCard;

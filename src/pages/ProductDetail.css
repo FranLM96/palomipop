@@ -1,0 +1,148 @@
+/* src/pages/ProductDetail.css - Estilos modernos y responsivos */
+
+:root {
+  --radius: 12px; /* Keep local radius variable */
+}
+
+body {
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background-color: var(--blanco-humo); /* Use global blanco-humo */
+}
+
+/* Container principal */
+.product-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - var(--header-height, 0px) - var(--footer-height, 0px));
+}
+
+/* Contenido general */
+.product-detail-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  background-color: var(--blanco-humo); /* Use global blanco-humo */
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+/* Imagen */
+.product-image-wrapper {
+  width: 100%;
+  padding: 1.5rem;
+  background-color: var(--blanco-humo); /* Use global blanco-humo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-in;
+  transition: background-color 0.3s;
+}
+
+.product-image-wrapper:hover {
+  background-color: var(--blanco-humo); /* Use global blanco-humo */
+}
+
+.product-detail-image {
+  max-width: 100%;
+  max-height: 350px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.product-detail-image:hover {
+  transform: scale(1.02);
+}
+
+/* Información del producto */
+.product-detail-info {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.product-detail-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-color); /* Use global dark-color */
+  text-align: center;
+}
+
+.product-detail-description {
+  font-size: 1.1rem;
+  color: var(--text-color-dark); /* Use global text-color-dark */
+  line-height: 1.6;
+  text-align: justify;
+}
+
+.product-detail-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--amarillo-palomita); /* Use global amarillo-palomita for price */
+  text-align: center;
+}
+
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(var(--dark-color), 0.9); /* Use global dark-color with transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.modal-content {
+  background-color: var(--blanco-humo); /* Use global blanco-humo */
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(var(--dark-color), 0.25); /* Use global dark-color with transparency */
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Responsive para pantallas medianas en adelante */
+@media (min-width: 768px) {
+  .product-detail-content {
+    flex-direction: row;
+  }
+
+  .product-image-wrapper {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .product-detail-info {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  .product-detail-name,
+  .product-detail-description,
+  .product-detail-price {
+    text-align: left;
+  }
+}

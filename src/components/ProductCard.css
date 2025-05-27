@@ -1,0 +1,56 @@
+.product-card {
+  border: 1px solid rgba(var(--dark-color), 0.2); /* Use dark color with transparency for border */
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card.sweet {
+  background-color: var(--rosa-pop); /* Pink background for sweet */
+  color: var(--text-color-light); /* Light text for contrast */
+}
+
+.product-card.savory {
+  background-color: var(--amarillo-palomita); /* Yellow background for savory */
+  color: var(--text-color-dark); /* Dark text for contrast */
+}
+
+.product-card.bebida {
+  background-color: var(--azul-electrico); /* Use azul-electrico for drinks */
+  color: var(--text-color-light); /* Light text for contrast */
+}
+
+.product-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.product-name {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: inherit; /* Inherit color from parent (.product-card) */
+}
+
+.product-description {
+  font-size: 0.9rem;
+  color: inherit; /* Inherit color from parent */
+  margin-bottom: 1rem;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: inherit; /* Inherit color from parent */
+}
+
+.product-card.sweet .product-price {
+  color: var(--white); /* Set price color to white for sweet cards */
+}

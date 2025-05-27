@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Page Not Found</title>
+  <script type="text/javascript">
+    // Get the current URL path
+    var path = window.location.pathname;
+
+    // Construct the new URL by redirecting to the index.html
+    // and preserving the original path in the hash
+    // This allows the client-side router to pick up the path
+    var redirectUrl = '/palomipop/index.html#' + path;
+
+    // Redirect the browser
+    window.location.replace(redirectUrl);
+  </script>
+</head>
+<body>
+  <!-- Optional: Display a message while redirecting -->
+  <p>Redirecting...</p>
+</body>
+</html>

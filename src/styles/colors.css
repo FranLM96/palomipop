@@ -1,0 +1,15 @@
+:root {
+  --rosa-pop: #E4007C;
+  --amarillo-palomita: #FFD700;
+  --azul-electrico: #4FD1FF;
+  --naranja-melon: #FFB347;
+  --negro-puro: #222222;
+  --blanco-humo: #FDFDFD;
+  --white: #FFFFFF;
+
+  /* Mapped colors for consistency */
+  --primary-color: var(--rosa-pop);
+  --dark-color: var(--negro-puro);
+  --text-color-light: var(--blanco-humo);
+  --text-color-dark: var(--negro-puro); /* Add a dark text color */
+}

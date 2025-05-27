@@ -1,0 +1,48 @@
+.filter-container {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex; /* Add flexbox to the container */
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically center the button */
+}
+
+.filter-toggle-button {
+  background-color: var(--primary-color); /* Use the primary color (rosa-pop) */
+  color: var(--text-color-light); /* Use light text color (blanco-humo) */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Space between toggle button and filters */
+  transition: background-color 0.3s ease;
+  margin-left: auto; /* Push the button to the right */
+}
+
+.filter-toggle-button:hover {
+  background-color: var(--rosa-pop); /* Use rosa-pop on hover */
+}
+
+.filter-controls {
+  /* Styles for the filter buttons container */
+  margin-top: 10px; /* Space above the filter buttons */
+}
+
+.filter-controls button {
+  background-color: var(--text-color-light); /* Use light text color */
+  border: 1px solid rgba(var(--dark-color), 0.3); /* Use dark color with transparency for border */
+  padding: 8px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-controls button.active {
+  background-color: var(--primary-color); /* Using CSS variable for primary color */
+  color: var(--text-color-light); /* Use light text color */
+  border-color: var(--primary-color);
+}
+
+.filter-controls button:hover:not(.active) {
+  background-color: var(--blanco-humo); /* Use blanco-humo on hover */
+}

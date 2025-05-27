@@ -1,0 +1,61 @@
+.nosotros-container {
+  padding: 2rem 1rem; /* Add some padding around the content */
+  max-width: 1280px;
+  margin: 0 auto; /* Center the container */
+}
+
+.nosotros-container h1 {
+  text-align: center;
+  color: var(--primary-color); /* Use the primary color for the main heading */
+  margin-bottom: 2rem;
+}
+
+.nosotros-section {
+  margin-bottom: 2rem; /* Space between sections */
+  padding: 1.5rem;
+  background-color: var(--white); /* White background for sections */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+.nosotros-section h2 {
+  color: var(--dark-color); /* Use dark color for section headings */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--amarillo-palomita); /* Add a separator */
+  padding-bottom: 0.5rem;
+}
+
+.nosotros-section p {
+  color: var(--text-color-dark); /* Use dark text color for paragraphs */
+  line-height: 1.6;
+}
+
+.nosotros-section ul {
+  color: var(--text-color-dark); /* Use dark text color for list */
+  padding-left: 20px;
+}
+
+.nosotros-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .nosotros-container {
+    padding: 1rem 0.5rem; /* Adjust padding on smaller screens */
+  }
+
+  .nosotros-section {
+    padding: 1rem; /* Adjust section padding */
+  }
+
+  .nosotros-section h2 {
+    font-size: 1.3rem; /* Adjust heading size */
+  }
+
+  .nosotros-section p,
+  .nosotros-section li {
+    font-size: 0.95rem; /* Adjust text size */
+  }
+}

@@ -1,0 +1,91 @@
+.modern-footer {
+  margin-top: 20px;
+  background-color: #ff8fa2; /* Dark background for a modern look */
+  color: var(--text-color-light); /* Light text color */
+  padding: 3rem 0;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle top border */
+}
+
+.modern-footer .footer-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-around;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.modern-footer .footer-section {
+  flex: 1;
+  min-width: 250px; /* Minimum width for each section */
+  margin: 1rem;
+}
+
+.modern-footer .footer-section h3 {
+  color: var(--amarillo-palomita); /* Highlight titles with a accent color */
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.modern-footer .footer-section p,
+.modern-footer .footer-section ul {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.modern-footer .footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modern-footer .footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.modern-footer .footer-section ul li a {
+  color: var(--text-color-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.modern-footer .footer-section ul li a:hover {
+  color: var(--amarillo-palomita);
+}
+
+.modern-footer .social-icons a {
+  color: var(--text-color-light);
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.modern-footer .social-icons a:hover {
+  color: var(--amarillo-palomita);
+}
+
+.modern-footer .footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05); /* Lighter border for bottom section */
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .modern-footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modern-footer .footer-section {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .modern-footer .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+}
