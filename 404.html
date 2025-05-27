@@ -7,10 +7,10 @@
     // Get the current URL path
     var path = window.location.pathname;
 
-    // Construct the new URL by redirecting to the index.html
+    // Construct the new URL by redirecting to the base path
     // and preserving the original path in the hash
     // This allows the client-side router to pick up the path
-    var redirectUrl = '/palomipop/index.html#' + path;
+    var redirectUrl = '/palomipop/#' + path;
 
     // Redirect the browser
     window.location.replace(redirectUrl);
